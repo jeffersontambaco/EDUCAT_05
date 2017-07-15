@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="shortcut icon" type="image/x-icon" href="img/icono.ico" />
+    </h:head>
+    <h:body>
+       <p:dataTable var ="docente" value ="#{docenteBean.docentes}">
+                    <p:column  headerText="codDocente">
+                        #{docente.codDocente}
+                    </p:column>
+                    <p:column  headerText="Nombre">
+                        #{docente.nombre}
+                    </p:column>
+                    <p:column  headerText="Direccion">
+                        #{docente.direccion}
+                    </p:column>
+                    <p:column  headerText="Telefono">
+                        #{docente.telefono}
+                    </p:column>
+                    <p:column  headerText="Correo">
+                        #{docente.correoElectronico}
+                    </p:column>
+                </p:dataTable>	
+    </h:body>
+</html>
