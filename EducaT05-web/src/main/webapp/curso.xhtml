@@ -17,7 +17,16 @@ and open the template in the editor.
     <body>
            <div class="container">
                 <h1>Listado de Alumnos</h1>
-                <p:dataTable var ="curso" value ="#{cursoBean.cursos}">
+                <p:dataTable var ="curso" value ="#{cursoBean.cursos}"
+                             rows="10"
+                         paginator="true" 
+                         paginatorPosition="bottom"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         rowsPerPageTemplate="5,10,15">
+                      <f:facet name="header">
+                    LISTADO DE CURSOS
+
+                </f:facet>
                     <p:column  headerText="codCurso">
                         #{curso.codCurso}
                     </p:column>
