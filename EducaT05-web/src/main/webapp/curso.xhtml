@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+           <div class="container">
+                <h1>Listado de Alumnos</h1>
+                <p:dataTable var ="curso" value ="#{cursoBean.cursos}">
+                    <p:column  headerText="codCurso">
+                        #{curso.codCurso}
+                    </p:column>
+                    <p:column  headerText="Nombre">
+                        #{curso.nombre}
+                    </p:column>
+                    <p:column  headerText="Objetivo">
+                        #{curso.objetivo}
+                    </p:column>
+                    <p:column  headerText="Descripcion">
+                        #{curso.descripcion}
+                    </p:column>
+                    <p:column  headerText="Duracion">
+                        #{curso.duracion}
+                    </p:column>
+                    <p:column  headerText="Estado">
+                        #{curso.estado}
+                    </p:column>
+                </p:dataTable>	
+                <br>            
+                </br>
+            </div>
+    </body>
+</html>

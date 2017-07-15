@@ -7,34 +7,45 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
+        <link rel="shortcut icon" type="image/x-icon" href="img/icono.ico" />
     </h:head>
     <h:body>
         paginas
         <br />
-      
-       <p:dataTable var ="alumno" value ="#{indexBean.alumnos}">
-                    <p:column  headerText="codAlumno">
-                        #{alumno.codAlumno}
-                    </p:column>
-                    <p:column  headerText="Nombre">
-                        #{alumno.nombre}
-                    </p:column>
-                    <p:column  headerText="Direccion">
-                        #{alumno.direccion}
-                    </p:column>
-                    <p:column  headerText="Telefono">
-                        #{alumno.telefono}
-                    </p:column>
-                    <p:column  headerText="Correo">
-                        #{alumno.correoElectronico}
-                    </p:column>
-                    <p:column  headerText="FechaNacimiento">
-                        #{alumno.fechaNacimiento}
-                    </p:column>
-                    <p:column  headerText="Genero">
-                        #{alumno.genero}
-                    </p:column>
-                </p:dataTable>	
+        <div class="container">
+            <p:dataTable var ="alumno" value ="#{indexBean.alumnos}"
+                         rows="10"
+                         paginator="true" 
+                         paginatorPosition="bottom"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         rowsPerPageTemplate="5,10,15">
+                <f:facet name="header">
+                    LISTADO DE ALUMNOS
+
+                </f:facet>
+                <p:column  headerText="codAlumno">
+                    #{alumno.codAlumno}
+                </p:column>
+                <p:column  headerText="Nombre">
+                    #{alumno.nombre}
+                </p:column>
+                <p:column  headerText="Direccion">
+                    #{alumno.direccion}
+                </p:column>
+                <p:column  headerText="Telefono">
+                    #{alumno.telefono}
+                </p:column>
+                <p:column  headerText="Correo">
+                    #{alumno.correoElectronico}
+                </p:column>
+                <p:column  headerText="FechaNacimiento">
+                    #{alumno.fechaNacimiento}
+                </p:column>
+                <p:column  headerText="Genero">
+                    #{alumno.genero}
+                </p:column>
+            </p:dataTable>	
+        </div>
 
     </h:body>
 </html>
