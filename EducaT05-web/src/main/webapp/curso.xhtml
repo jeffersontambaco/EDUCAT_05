@@ -10,44 +10,46 @@ and open the template in the editor.
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-           <div class="container">
-                <h1>Listado de Alumnos</h1>
-                <p:dataTable var ="curso" value ="#{cursoBean.cursos}"
-                             rows="10"
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="shortcut icon" type="image/x-icon" href="img/icono.ico" />
+    </h:head>
+    <h:body>
+
+
+        <div class="container">
+
+            <p:dataTable var ="curso" value ="#{cursoBean.cursos}"
+                         rows="10"
                          paginator="true" 
                          paginatorPosition="bottom"
                          paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                          rowsPerPageTemplate="5,10,15">
-                      <f:facet name="header">
+                <f:facet name="header">
                     LISTADO DE CURSOS
 
                 </f:facet>
-                    <p:column  headerText="codCurso">
-                        #{curso.codCurso}
-                    </p:column>
-                    <p:column  headerText="Nombre">
-                        #{curso.nombre}
-                    </p:column>
-                    <p:column  headerText="Objetivo">
-                        #{curso.objetivo}
-                    </p:column>
-                    <p:column  headerText="Descripcion">
-                        #{curso.descripcion}
-                    </p:column>
-                    <p:column  headerText="Duracion">
-                        #{curso.duracion}
-                    </p:column>
-                    <p:column  headerText="Estado">
-                        #{curso.estado}
-                    </p:column>
-                </p:dataTable>	
-                <br>            
-                </br>
-            </div>
-    </body>
+                <p:column  headerText="codCurso">
+                    #{curso.codCurso}
+                </p:column>
+                <p:column  headerText="Nombre">
+                    #{curso.nombre}
+                </p:column>
+                <p:column  headerText="Objetivo">
+                    #{curso.objetivo}
+                </p:column>
+                <p:column  headerText="Descripcion">
+                    #{curso.descripcion}
+                </p:column>
+                <p:column  headerText="Duracion">
+                    #{curso.duracion}
+                </p:column>
+                <p:column  headerText="Estado">
+                    #{curso.estado}
+                </p:column>
+            </p:dataTable>	
+            <br>            
+            </br>
+        </div>
+    </h:body>
 </html>
