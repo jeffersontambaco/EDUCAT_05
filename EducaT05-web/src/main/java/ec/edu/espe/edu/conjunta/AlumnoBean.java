@@ -19,7 +19,7 @@ import javax.faces.bean.ViewScoped;
 @ManagedBean
 @ViewScoped
 
-public class IndexBean {
+public class AlumnoBean {
 
     @EJB
     private AlumnoService alumnoService;

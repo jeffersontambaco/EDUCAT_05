@@ -15,22 +15,32 @@ and open the template in the editor.
         <link rel="shortcut icon" type="image/x-icon" href="img/icono.ico" />
     </h:head>
     <h:body>
-       <p:dataTable var ="docente" value ="#{docenteBean.docentes}">
-                    <p:column  headerText="codDocente">
-                        #{docente.codDocente}
-                    </p:column>
-                    <p:column  headerText="Nombre">
-                        #{docente.nombre}
-                    </p:column>
-                    <p:column  headerText="Direccion">
-                        #{docente.direccion}
-                    </p:column>
-                    <p:column  headerText="Telefono">
-                        #{docente.telefono}
-                    </p:column>
-                    <p:column  headerText="Correo">
-                        #{docente.correoElectronico}
-                    </p:column>
-                </p:dataTable>	
+        <p:dataTable var ="docente" value ="#{docenteBean.docentes}"
+                     rows="10"
+                     paginator="true" 
+                     paginatorPosition="bottom"
+                     paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                     rowsPerPageTemplate="5,10,15">
+
+            <f:facet name="header">
+                LISTADO DE DOCENTES
+
+            </f:facet>
+            <p:column  headerText="codDocente">
+                #{docente.codDocente}
+            </p:column>
+            <p:column  headerText="Nombre">
+                #{docente.nombre}
+            </p:column>
+            <p:column  headerText="Direccion">
+                #{docente.direccion}
+            </p:column>
+            <p:column  headerText="Telefono">
+                #{docente.telefono}
+            </p:column>
+            <p:column  headerText="Correo">
+                #{docente.correoElectronico}
+            </p:column>
+        </p:dataTable>	
     </h:body>
 </html>

@@ -19,6 +19,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>faces/curso.xhtml</welcome-file>
+        <welcome-file>faces/alumno.xhtml</welcome-file>
     </welcome-file-list>
 </web-app>
