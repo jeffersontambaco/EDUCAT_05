@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package espe.edu.ec.educat.model;
 
 import java.io.Serializable;
@@ -20,7 +16,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author jeffe
+ * @author Alejandro Torres
  */
 @Entity
 @Table(name = "docente")
@@ -34,26 +30,42 @@ public class Docente implements Serializable {
     @NotNull
     @Size(min = 1, max = 10)
     @Column(name = "COD_DOCENTE", nullable = false, length = 10)
+    /*
+    * Clave primaria que corresponde a la cédula de identidad del docente
+    */
     private String codDocente;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 150)
     @Column(name = "NOMBRE", nullable = false, length = 150)
+    /*
+    * atributo que almacena el nombre del docente
+    */
     private String nombre;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 200)
     @Column(name = "DIRECCION", nullable = false, length = 200)
+    /*
+    * atributo que almacena la dirección del docente
+    */
     private String direccion;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 15)
     @Column(name = "TELEFONO", nullable = false, length = 15)
+    /*
+    * atributo que almacena el numero de telefono del docente tiene un máximo de 15 digitos
+    */
     private String telefono;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 128)
     @Column(name = "CORREO_ELECTRONICO", nullable = false, length = 128)
+    /*
+    * atributo que almacena la direccion de correo electronico del docente, 
+    * tiene un maximo de 128 caracteres.
+    */
     private String correoElectronico;
     @OneToMany(mappedBy = "codDocente")
     private List<Capacitacion> capacitacionList;
