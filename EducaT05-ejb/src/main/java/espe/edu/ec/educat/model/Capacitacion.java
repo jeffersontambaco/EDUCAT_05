@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Entidad que almacena la informacion correspondiente a la capacitacion que 
+ * el instituto ofrece
  */
 package espe.edu.ec.educat.model;
 
@@ -28,7 +27,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author jeffe
+ * @author Jefferson Tambaco
  */
 @Entity
 @Table(name = "capacitacion")
@@ -40,33 +39,56 @@ public class Capacitacion implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "COD_CAPACITACION", nullable = false)
+    /*
+    * Llave primaria que corresponde al codigo de la capacitacion
+     */
     private Integer codCapacitacion;
     @Basic(optional = false)
     @NotNull
     @Column(name = "FECHA_INICIO", nullable = false)
     @Temporal(TemporalType.DATE)
+     /*
+    * Atributo que almacena la fecha de inicio de una capacitacion
+     */
     private Date fechaInicio;
     @Basic(optional = false)
     @NotNull
     @Column(name = "FECHA_FIN", nullable = false)
     @Temporal(TemporalType.DATE)
+     /*
+    * Atributo que almacena la fecha de finalizacion de la capacitacion
+     */
     private Date fechaFin;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO", nullable = false, length = 3)
+     /*
+    * Atributo que almacena el estado de la capacitacion estos estados pueden 
+    * ser: Inscripciones, En Progreso, Finalizada, Cancelada, Definida : 
+    * (INS-PRO-FIN-CAN-DEF)
+     */
     private String estado;
     @Basic(optional = false)
     @NotNull
     @Column(name = "CAPACIDAD", nullable = false)
+     /*
+    * Atributo que almacena la capacidad que puede tener una capactiacion
+     */
     private short capacidad;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "capacitacion")
     private List<CapacitacionAlumno> capacitacionAlumnoList;
     @JoinColumn(name = "COD_CURSO", referencedColumnName = "COD_CURSO", nullable = false)
     @ManyToOne(optional = false)
+     /*
+    * Llave foránea que corresponde al codigo del curso 
+     */
     private Curso codCurso;
     @JoinColumn(name = "COD_DOCENTE", referencedColumnName = "COD_DOCENTE")
     @ManyToOne
+    /*
+    * Clave primaria que corresponde a la cédula de identidad del docente
+     */
     private Docente codDocente;
 
     public Capacitacion() {
