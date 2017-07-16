@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Entidad que almacena la informacion de alumno en una capacitacion
  */
 package espe.edu.ec.educat.model;
 
@@ -13,15 +11,13 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
  *
- * @author jeffe
+ * @author Jefferson Tambaco
  */
 @Entity
 @Table(name = "capacitacion_alumno")
@@ -35,17 +31,31 @@ public class CapacitacionAlumno implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "NOTA_FINAL", nullable = false, precision = 4, scale = 2)
+    /*
+    * Atributo que almacena la nota final que obtuvo un alumno en la capacitacion
+    */
     private BigDecimal notaFinal;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO", nullable = false, length = 3)
+     /*
+    * Atributo que almacena el estado del alumno en la capacitacion, estos 
+    * pueden ser: Inscrito,Matriculado,Aprobado, Reprobado y Reprobado por 
+    * Faltas (INS-MAT-APR-REP-RPF)
+    */
     private String estado;
     @JoinColumn(name = "COD_ALUMNO", referencedColumnName = "COD_ALUMNO", nullable = false, insertable = false, updatable = false)
     @ManyToOne(optional = false)
+     /*
+    * Llave primaria que corresponde al codigo del alumno
+    */
     private Alumno alumno;
     @JoinColumn(name = "COD_CAPACITACION", referencedColumnName = "COD_CAPACITACION", nullable = false, insertable = false, updatable = false)
     @ManyToOne(optional = false)
+    /*
+    * Llave primaria que corresponde a capacitacion
+    */
     private Capacitacion capacitacion;
 
     public CapacitacionAlumno() {
