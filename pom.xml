@@ -11,4 +11,347 @@
     <module>EducaT05-web</module>
     <module>EducaT05-ejb</module>
   </modules>
+  
+  
+  
+ 
+     <description>El presente proyecto cubre el desarrollo e implementación de 
+        un sistema de información basado en la web que brinda la administración
+        de los cursos y programas que dicho instituto ofrece al público.
+        Cuenta con los siguientes módulos:
+        Gestión de usuarios
+        Gestión de cursos
+        Gestión de programas
+        Gestión de capacitación
+        Registro de notas
+        Consultar notas.
+    </description>
+    <url>https://github.com/JonathanAlejandroTorres/Educa05</url>
+
+    <organization>
+        <name>UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE</name>
+        <url>http://www.espe.edu.ec/?q=la-espe/quienes-somos</url>
+
+    </organization>     
+
+    <scm>
+        <connection>scm:git:https://github.com/JonathanAlejandroTorres/Educa05</connection>
+        <developerConnection>scm:git:https://github.com/JonathanAlejandroTorres/Educa05</developerConnection>
+        <url>scm:git:https://github.com/JonathanAlejandroTorres/Educa05</url>
+    </scm>
+      
+    <developers>
+        <developer>
+            <id>dxyandun</id>
+            <name>Diego Yandun</name>
+            <email>dxyandun@espe.edu.ec</email>
+            <!--<url>http://www.example.com/jdoe</url> -->    
+            <roles>
+                <role>Project Leader</role>
+                <role>Developer</role>
+            </roles>
+            <timezone>America/Ecuador</timezone>
+            <properties>
+                <picUrl>C:\Users\jeffe\Desktop\Software_Practica\Educa05\target\site\images\Diego.jpg</picUrl>
+            </properties>
+        </developer>
+        <developer>
+            <id>jitambaco</id>
+            <name>Jefferson Tambaco</name>
+            <email>jitambaco@espe.edu.ec</email>
+            <!--<url>http://www.example.com/jdoe</url> -->
+            <roles> 
+                <role>developer</role>
+            </roles>
+            <timezone>America/Ecuador</timezone>
+            <properties>
+                <picUrl>C:\Users\jeffe\Desktop\Software_Practica\Educa05\target\site\images\Jefferson.jpg</picUrl>
+            </properties>
+        </developer>
+        <developer>
+            <id>jatorres</id>
+            <name>Jonathan Torres</name>
+            <email>jatorres@espe.edu.ec</email>
+            <!--<url>http://www.example.com/jdoe</url> -->      
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>America/Ecuador</timezone>
+            <properties>
+                <picUrl> C:\Users\jeffe\Desktop\Software_Practica\Educa05\target\site\images\Alejandro.png</picUrl>
+            </properties>
+        </developer>
+    </developers>
+ 
+    
+    <contributors>
+        <contributor>
+            <name>Henry Coral</name>
+            <email>hcoral@espe.edu.ec</email>
+            <!--<url>http://noellemarie.com</url> -->
+            <!--<organization>Noelle Marie</organization> -->
+            <!--<organizationUrl>http://noellemarie.com</organizationUrl> -->
+            <roles>
+                <role>Administrator</role>
+            </roles>
+            <timezone>America/Ecuador</timezone>
+            <!--<properties>
+                <gtalk>some.name@gmail.com</gtalk>
+            </properties> -->
+        </contributor>
+    </contributors>
+    
+    
+  
+    
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+                  
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>checkstyle</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.8</version>
+                <configuration>
+
+                    <linkXref>true</linkXref>
+                    <sourceEncoding>utf-8</sourceEncoding>
+                    <minimumTokens>1</minimumTokens>
+                    <targetJdk>1.7</targetJdk>
+                    <skipEmptyReport>false</skipEmptyReport>
+                    <rulesets>
+                        <ruleset>rulesets/java/basic.xml</ruleset>
+                        <ruleset>rulesets/java/clone.xml</ruleset>
+                        <ruleset>rulesets/java/codesize.xml</ruleset>
+                        <ruleset>rulesets/java/comments.xml</ruleset>
+                        <ruleset>rulesets/java/controversial.xml</ruleset>
+                        <ruleset>rulesets/java/coupling.xml</ruleset>
+                        <ruleset>rulesets/java/design.xml</ruleset>
+                        <ruleset>rulesets/java/empty.xml</ruleset>
+                        <ruleset>rulesets/java/finalizers.xml</ruleset>
+                        <ruleset>rulesets/java/imports.xml</ruleset>
+                        <ruleset>rulesets/java/naming.xml</ruleset>
+                        <ruleset>rulesets/java/optimizations.xml</ruleset>
+                        <ruleset>rulesets/java/strictexception.xml</ruleset>
+                        <ruleset>rulesets/java/strings.xml</ruleset>
+                        <ruleset>rulesets/java/sunsecure.xml</ruleset>
+                        <ruleset>rulesets/java/unnecessary.xml</ruleset>
+                        <ruleset>rulesets/java/unusedcode.xml</ruleset>
+                    </rulesets>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.9</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>dependencies</report>
+                            <report>project-team</report>
+                            <report>mailing-list</report>
+                            <report>cim</report>
+                            <report>issue-tracking</report>
+                            
+                            <report>license</report>
+                            <report>scm</report>
+                           
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <configuration>
+          
+                </configuration>
+            </plugin>
+       
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <linkXRef>true</linkXRef>
+                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+                    <minimumTokens>100</minimumTokens>
+                    <targetJdk>1.5</targetJdk>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
+                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.8</version>
+                <configuration>
+                    <quiet>true</quiet>
+                    <links>
+                        <link>http://download.oracle.com/javase/1.5.0/docs/api/</link>
+                    </links>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.10</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jdepend-maven-plugin</artifactId>
+                <version>2.0-beta-2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changes-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <githubAPIScheme>https</githubAPIScheme>
+                    <githubAPIPort>443</githubAPIPort>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changes-plugin</artifactId>
+                <version>2.12.1</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>changes-report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            
+            
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.8</version>
+                <configuration>
+                    <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+                    <docletArtifact>
+                        <groupId>org.umlgraph</groupId>
+                        <artifactId>doclet</artifactId>
+                        <version>5.1</version>
+                    </docletArtifact>
+                    <additionalparam>-views</additionalparam>
+                    <useStandardDocletOptions>true</useStandardDocletOptions>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>taglist-maven-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+            
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.8</version>
+                <configuration>
+                    <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+                    <docletArtifact>
+                        <groupId>org.umlgraph</groupId>
+                        <artifactId>doclet</artifactId>
+                        <version>5.1</version>
+                    </docletArtifact>
+                    <additionalparam>-views</additionalparam>
+                    <useStandardDocletOptions>true</useStandardDocletOptions>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                </configuration>
+            </plugin>  
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changelog-plugin</artifactId>
+                <version>2.2</version>
+            </plugin> 
+                              
+        </plugins>
+        
+    </reporting>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    <issueManagement>
+        <system>Bugzilla</system>
+        <url>http://127.0.0.1/bugzilla/</url>
+    </issueManagement>
+    
+    <ciManagement>
+        <system>continuum</system>
+        <url>http://127.0.0.1:8080/continuum</url>
+        <notifiers>
+            <notifier>
+                <type>mail</type>
+                <sendOnError>true</sendOnError>
+                <sendOnFailure>true</sendOnFailure>
+                <sendOnSuccess>false</sendOnSuccess>
+                <sendOnWarning>false</sendOnWarning>
+                <configuration>
+                    <address>jitambaco@espe.edu.ec</address>
+                </configuration>
+            </notifier>
+        </notifiers>
+    </ciManagement>
 </project>
