@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package espe.edu.ec.educat.model;
 
 import java.io.Serializable;
@@ -20,7 +16,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author jeffe
+ * @author Alejandro Torres
  */
 @Entity
 @Table(name = "programa_alumno")
@@ -35,12 +31,22 @@ public class ProgramaAlumno implements Serializable {
     @NotNull
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO", nullable = false, length = 3)
+    /*
+    * Atributo que almacena el estado del alumno en el programa este puede ser: 
+    * Inscrito, Matriculado, Programa, Fin (INS-MAT-PRO-FIN)
+    */
     private String estado;
     @JoinColumn(name = "COD_ALUMNO", referencedColumnName = "COD_ALUMNO", nullable = false, insertable = false, updatable = false)
     @ManyToOne(optional = false)
+    /*
+    * Llave primaria que corresponde al codigo del alumno
+    */
     private Alumno alumno;
     @JoinColumn(name = "COD_PROGRAMA", referencedColumnName = "COD_PROGRAMA", nullable = false, insertable = false, updatable = false)
     @ManyToOne(optional = false)
+    /*
+    * Llave primaria de 8 caracteres que identifica al programa
+    */
     private Programa programa;
 
     public ProgramaAlumno() {
