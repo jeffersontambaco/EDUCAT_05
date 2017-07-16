@@ -1,7 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+@(#)AbstractFacade.java     1.0 02/07/2017
+*
+*Copyright 2017 Grupo_05 All rights reserved.
+*Grupo_05 Propietary. Use is subject to license terms
+ */
+/**
+ * Sirve como una clase	padre para todos los demás Facade Clases.
+ * AbstractFacade es una clase abstracta que tiene métodos genéricos para
+ * soportar operaciones CRUD (crear,eliminar,buscar,modificar) para cualquier
+ * entidad.
  */
 package espe.edu.ec.educat.dao;
 
@@ -9,8 +16,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 /**
- *
- * @author jeffe
+ * @version 1.0
+ * @author Jefferson Tambaco
  */
 public abstract class AbstractFacade<T> {
 
