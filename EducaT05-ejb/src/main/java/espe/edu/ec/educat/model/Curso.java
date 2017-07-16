@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package espe.edu.ec.educat.model;
 
 import java.io.Serializable;
@@ -21,7 +17,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author jeffe
+ * @author Alejandro Torres
  */
 @Entity
 @Table(name = "curso")
@@ -35,26 +31,45 @@ public class Curso implements Serializable {
     @NotNull
     @Size(min = 1, max = 8)
     @Column(name = "COD_CURSO", nullable = false, length = 8)
+    /*
+    * Llave primaria que identifica a los diferentes cursos que ofrece el instituto
+    */
     private String codCurso;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 100)
     @Column(name = "NOMBRE", nullable = false, length = 100)
+    /*
+    * atributo que almacena el nombre del curso    
+    */
     private String nombre;
     @Size(max = 4000)
     @Column(name = "OBJETIVO", length = 4000)
+    /*
+    * atributo que almacena el objetivo del curso
+    */
     private String objetivo;
     @Size(max = 4000)
     @Column(name = "DESCRIPCION", length = 4000)
+    /*
+    * atributo que almacena una breve descripcion del curso
+    */
     private String descripcion;
     @Basic(optional = false)
     @NotNull
     @Column(name = "DURACION", nullable = false)
+    /*
+    * atributo que almacena la duracion del curso 
+    */
     private short duracion;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO", nullable = false, length = 3)
+    /*
+    * ACT' COMMENT Atributo que almacena el estado en el que se encuentra el 
+    * curso este puede ser Activo o Inactivo (ACT - INA) respectivamente.
+    */
     private String estado;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "codCurso")
     private List<Capacitacion> capacitacionList;
