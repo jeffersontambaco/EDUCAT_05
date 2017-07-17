@@ -3,7 +3,7 @@
 ## DESCRIPCIÓN DEL PROYECTO
 El presente proyecto cubre el desarrollo e implementación de 
 un sistema de información basado en la web que brinda la administración
-de los cursos y programas que dicho instituto ofrece al público.
+de los cursos y programas que el  Instituto CourseTec ofrece al público.
 Cuenta con los siguientes módulos: 
 * Gestión de usuarios
 * Gestión de cursos
