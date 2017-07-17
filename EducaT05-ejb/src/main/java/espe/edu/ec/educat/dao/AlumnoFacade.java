@@ -1,4 +1,9 @@
 /*
+ *Clase AlumnoFacade generada a partir de la clase de entidad Alumno
+ */
+
+
+/*
 @(#)AlumnoFacade.java     1.0 02/07/2017
 *
 *Copyright 2017 Grupo_05 All rights reserved.
