@@ -1,11 +1,11 @@
 /*
-@(#)AlumnoFacade.java     1.0 02/07/2017
+@(#)CapacitacionFacade.java     1.0 02/07/2017
 *
 *Copyright 2017 Grupo_05 All rights reserved.
 *Grupo_05 Propietary. Use is subject to license terms
  * The MIT License
  *
- * Copyright 2017 Grupo_05.
+ *
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
