@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *Clase AlumnoService permite llamar a las otras clases para
+* obtener los datos
  */
 package espe.edu.ec.educat.service;
 
@@ -19,7 +18,8 @@ import javax.ejb.LocalBean;
 @Stateless
 @LocalBean
 public class AlumnoService {
-   @EJB
+
+    @EJB
     private AlumnoFacade alumnofacade;
 
     public List<Alumno> obtenerAlumno() {
