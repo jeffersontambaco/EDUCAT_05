@@ -1,7 +1,10 @@
 /*
+@(#)CapacitacionAlumno.java     1.0 02/07/2017
+*
+*Copyright 2017 Grupo_05 All rights reserved.
+*Grupo_05 Propietary. Use is subject to license terms
  * The MIT License
- *
- * Copyright 2017 Jonathan.
+ * 
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,8 +27,6 @@
 /**
  * Entidad que almacena las llaves primarias de CapacitacionAlumno
  */
-
-
 package espe.edu.ec.educat.model;
 
 import java.io.Serializable;
@@ -41,9 +42,10 @@ import javax.validation.constraints.Size;
  */
 @Embeddable
 public class CapacitacionAlumnoPK implements Serializable {
+
     /**
-     * Clave primaria, foránea de 4 caracteres que hereda 
-     * de la tabla Capacitacion
+     * Clave primaria, foránea de 4 caracteres que hereda de la tabla
+     * Capacitacion
      */
     @Basic(optional = false)
     @NotNull
@@ -110,5 +112,5 @@ public class CapacitacionAlumnoPK implements Serializable {
     public String toString() {
         return "ec.edu.espe.edu.conjunta.model.CapacitacionAlumnoPK[ codCapacitacion=" + codCapacitacion + ", codAlumno=" + codAlumno + " ]";
     }
-    
+
 }
