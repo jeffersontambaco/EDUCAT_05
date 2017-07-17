@@ -20,6 +20,9 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+**/
+/**
+ * Entidad que almacena las llaves primarias de CapacitacionAlumno
  */
 
 
@@ -33,8 +36,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- *
- * @author diegoyandun
+ * @version 1.0
+ * @author Alejandro Torres
  */
 @Embeddable
 public class CapacitacionAlumnoPK implements Serializable {
