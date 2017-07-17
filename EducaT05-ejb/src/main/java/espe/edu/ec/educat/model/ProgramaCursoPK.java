@@ -26,12 +26,9 @@
  * THE SOFTWARE.
  **/
 /**
- * Clase ProgramaCursoPK generada a partir de la entidad ProgramaCurso
+ * Entidad que almacena las llaves primarias de ProgramaCurso
  */
  
- 
-
-
 package espe.edu.ec.educat.model;
 
 import java.io.Serializable;
@@ -42,7 +39,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- *
+ * @version 1.0
  * @author diegoyandun
  */
 @Embeddable
