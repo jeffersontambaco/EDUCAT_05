@@ -1,4 +1,6 @@
-
+/*
+ * Entidad que almacena la informacion correspondiente a los alumnos del instituto
+ */
 package espe.edu.ec.educat.model;
 
 import java.io.Serializable;

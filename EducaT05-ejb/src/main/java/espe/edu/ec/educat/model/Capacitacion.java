@@ -16,8 +16,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
+
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -47,7 +46,7 @@ public class Capacitacion implements Serializable {
     @NotNull
     @Column(name = "FECHA_INICIO", nullable = false)
     @Temporal(TemporalType.DATE)
-     /*
+    /*
     * Atributo que almacena la fecha de inicio de una capacitacion
      */
     private Date fechaInicio;
@@ -55,7 +54,7 @@ public class Capacitacion implements Serializable {
     @NotNull
     @Column(name = "FECHA_FIN", nullable = false)
     @Temporal(TemporalType.DATE)
-     /*
+    /*
     * Atributo que almacena la fecha de finalizacion de la capacitacion
      */
     private Date fechaFin;
@@ -63,7 +62,7 @@ public class Capacitacion implements Serializable {
     @NotNull
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO", nullable = false, length = 3)
-     /*
+    /*
     * Atributo que almacena el estado de la capacitacion estos estados pueden 
     * ser: Inscripciones, En Progreso, Finalizada, Cancelada, Definida : 
     * (INS-PRO-FIN-CAN-DEF)
@@ -72,7 +71,7 @@ public class Capacitacion implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "CAPACIDAD", nullable = false)
-     /*
+    /*
     * Atributo que almacena la capacidad que puede tener una capactiacion
      */
     private short capacidad;
@@ -80,7 +79,7 @@ public class Capacitacion implements Serializable {
     private List<CapacitacionAlumno> capacitacionAlumnoList;
     @JoinColumn(name = "COD_CURSO", referencedColumnName = "COD_CURSO", nullable = false)
     @ManyToOne(optional = false)
-     /*
+    /*
     * Llave foránea que corresponde al codigo del curso 
      */
     private Curso codCurso;
@@ -194,5 +193,5 @@ public class Capacitacion implements Serializable {
     public String toString() {
         return "ec.edu.espe.edu.conjunta.model.Capacitacion[ codCapacitacion=" + codCapacitacion + " ]";
     }
-    
+
 }
