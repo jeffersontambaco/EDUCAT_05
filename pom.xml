@@ -26,7 +26,7 @@
         Registro de notas
         Consultar notas.
     </description>
-    <url>https://github.com/JonathanAlejandroTorres/Educa05</url>
+    <url>https://github.com/jeffersontambaco/EDUCAT_05.git</url>
 
     <organization>
         <name>UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE</name>
@@ -35,9 +35,9 @@
     </organization>     
 
     <scm>
-        <connection>scm:git:https://github.com/JonathanAlejandroTorres/Educa05</connection>
-        <developerConnection>scm:git:https://github.com/JonathanAlejandroTorres/Educa05</developerConnection>
-        <url>scm:git:https://github.com/JonathanAlejandroTorres/Educa05</url>
+        <connection>scm:git:https://github.com/jeffersontambaco/EDUCAT_05.git</connection>
+        <developerConnection>scm:githttps://github.com/jeffersontambaco/EDUCAT_05.git</developerConnection>
+        <url>scm:git:https://github.com/jeffersontambaco/EDUCAT_05.git</url>
     </scm>
       
     <developers>
@@ -327,7 +327,7 @@
     </reporting>
     <licenses>
         <license>
-            <name>Apache License, Version 2.0</name>
+            <name>Apache License, Version 3.0</name>
             <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
             <comments>A business-friendly OSS license</comments>
@@ -339,8 +339,8 @@
     </issueManagement>
     
     <ciManagement>
-        <system>continuum</system>
-        <url>http://127.0.0.1:8080/continuum</url>
+        <system>bamboo</system>
+        <url>http://200.69.172.183:8085/</url>
         <notifiers>
             <notifier>
                 <type>mail</type>
