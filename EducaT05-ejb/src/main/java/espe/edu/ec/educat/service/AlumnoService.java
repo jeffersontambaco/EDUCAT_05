@@ -1,5 +1,8 @@
 
-
+/*
+ *Clase AlumnoService permite llamar a las otras clases para
+* obtener los datos
+ */
 
 package espe.edu.ec.educat.service;
 
