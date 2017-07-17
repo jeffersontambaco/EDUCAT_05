@@ -52,7 +52,7 @@
             </roles>
             <timezone>America/Ecuador</timezone>
             <properties>
-                <picUrl>C:\Users\jeffe\Desktop\Software_Practica\Educa05\target\site\images\Diego.jpg</picUrl>
+                <picUrl>C:\EJB\Software_Practica\EducaT05\target\site\images\Diego.jpg</picUrl>
             </properties>
         </developer>
         <developer>
@@ -65,7 +65,7 @@
             </roles>
             <timezone>America/Ecuador</timezone>
             <properties>
-                <picUrl>C:\Users\jeffe\Desktop\Software_Practica\Educa05\target\site\images\Jefferson.jpg</picUrl>
+                <picUrl>C:\EJB\Software_Practica\EducaT05\target\site\images\Jefferson.jpg</picUrl>
             </properties>
         </developer>
         <developer>
@@ -78,7 +78,7 @@
             </roles>
             <timezone>America/Ecuador</timezone>
             <properties>
-                <picUrl> C:\Users\jeffe\Desktop\Software_Practica\Educa05\target\site\images\Alejandro.png</picUrl>
+                <picUrl> C:\EJB\Software_Practica\EducaT05\target\site\images\Alejandro.png</picUrl>
             </properties>
         </developer>
     </developers>
@@ -325,19 +325,18 @@
         </plugins>
         
     </reporting>
-    <licenses>
+ <licenses>
         <license>
-            <name>Apache License, Version 3.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
             <distribution>repo</distribution>
-            <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
-    <issueManagement>
-        <system>Bugzilla</system>
-        <url>http://127.0.0.1/bugzilla/</url>
-    </issueManagement>
-    
+
+<issueManagement>
+        <url>https://github.com/jeffersontambaco/EDUCAT_05/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>    
     <ciManagement>
         <system>bamboo</system>
         <url>http://200.69.172.183:8085/</url>
