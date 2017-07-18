@@ -25,7 +25,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  **/
-/**
+/*
  * Sirve como una clase	padre para todos los demás Facade Clases.
  * AbstractFacade es una clase abstracta que tiene métodos genéricos para
  * soportar operaciones CRUD (crear,eliminar,buscar,modificar) para cualquier
