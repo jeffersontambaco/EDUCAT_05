@@ -11,9 +11,6 @@
         <module>EducaT05-web</module>
         <module>EducaT05-ejb</module>
     </modules>
-  
-  
-  
  
     <description>El presente proyecto cubre el desarrollo e implementación de 
         un sistema de información basado en la web que brinda la administración
